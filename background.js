@@ -5,13 +5,13 @@ function setTab(id) {
     tabId = id;
     tabset = true;
     chrome.browserAction.setTitle({title: 'Move tab here'});
-    chrome.browserAction.setIcon({path: {'19': 'icon19out.png', '38': 'icon38out.png'}});
+    chrome.browserAction.setIcon({path: {'19': 'icons/icon19out.png', '38': 'icons/icon38out.png'}});
 }
 
 function clearSetTab() {
     tabset = false;
     chrome.browserAction.setTitle({title: 'Move this tab'});
-    chrome.browserAction.setIcon({path: {'19': 'icon19in.png', '38': 'icon38in.png'}});
+    chrome.browserAction.setIcon({path: {'19': 'icons/icon19in.png', '38': 'icons/icon38in.png'}});
 }
 
 function moveTab(windowId, tabid) {
