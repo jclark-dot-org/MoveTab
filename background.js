@@ -12,10 +12,10 @@ function clearSetTab() {
     chrome.browserAction.setIcon({path: {'19': 'icon19in.png', '38': 'icon38in.png'}});
 }
 
-function moveTab(windowId) {
+function moveTab(windowId, tabid) {
     chrome.tabs.get(tabId, function(tab){
 	if (tab) {
-	    chrome.tabs.move(tabId, {'windowId': windowId, index: -1});
+	    chrome.tabs.move(tabId, {'windowId': windowId, index: tabid});
 	}
 	clearSetTab();
     });
@@ -29,7 +29,7 @@ chrome.tabs.onRemoved.addListener(function(id, removeInfo) {
 
 chrome.browserAction.onClicked.addListener(function(tab) {
     if (tabset) {
-	moveTab(tab.windowId);
+	moveTab(tab.windowId, (tab.index + 1));
     } else {
 	if (tab.hasOwnProperty('id')) {
 	    setTab(tab.id);
