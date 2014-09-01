@@ -1,0 +1,16 @@
+{
+  "name": "MoveTab",
+  "description": "A chrome extension that helps you move your tabs from one window to another without dragging and dropping.",
+  "version": "0.1",
+  "permissions": [
+    "tabs"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_title": "Move this tab",
+  },
+  "manifest_version": 2
+}
