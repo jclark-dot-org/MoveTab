@@ -13,4 +13,7 @@ It's that simple!
 
 See it in action : http://youtu.be/vfDr4wDPHQI
 
+Try it yourself: https://chrome.google.com/webstore/detail/movetab/jokbmfhbamgbbjglhcphlpkcklpbceid
+
+
 Credit: Icons adapted from original by designer Gedeon Maheux.
