@@ -15,7 +15,9 @@ function clearSetTab() {
 function moveTab(windowId, tabid) {
     chrome.tabs.get(tabId, function(tab){
 	if (tab) {
-	    chrome.tabs.move(tabId, {'windowId': windowId, index: tabid});
+	    chrome.tabs.move(tabId, {'windowId': windowId, index: tabid}, function(movedTab){
+		    chrome.tabs.update(movedTab.id, {active: true});
+});
 	}
 	clearSetTab();
     });
